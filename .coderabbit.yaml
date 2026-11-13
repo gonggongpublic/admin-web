@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: ko-KR
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  review_status: true
+  collapse_walkthrough: true
+  poem: false
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - "^develop$"
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/build/**"
+    - "!**/.next/**"
+  path_instructions:
+    - path: "**/*"
+      instructions: >-
+        관리자 화면에서 기관 전환 시 이전 기관의 데이터가 남는지 확인합니다. 서버 권한 검사를 우회하는 UI 가정, 세션 만료 처리, 키보드 사용과 오류 상태를 살핍니다.
+chat:
+  auto_reply: true
